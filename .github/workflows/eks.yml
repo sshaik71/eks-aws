@@ -42,9 +42,9 @@ jobs:
       
       - name: Terraform apply
         if: ${{ github.event.inputs.action == 'apply' }}
-        run: terraform apply
+        run: terraform apply -auto-approve
 
-      - name: Terraform destroy
+      - name: Terraform destroy -auto-approve
         if: ${{ github.event.inputs.action == 'destroy' }}
         run: terraform destroy
       
