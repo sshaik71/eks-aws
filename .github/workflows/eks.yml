@@ -41,11 +41,11 @@ jobs:
         run: terraform plan
       
       - name: Terraform apply
-        if: {{ git.event.inputs.action = 'apply' }}
+        if: {{ github.event.inputs.action = 'apply' }}
         run: terraform apply
 
       - name: Terraform destroy
-        if: {{ git.event.inputs.action = 'destroy' }}
+        if: {{ github.event.inputs.action = 'destroy' }}
         run: terraform destroy
       
       
