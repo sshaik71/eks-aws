@@ -42,6 +42,11 @@ data "aws_subnets" "public" {
   }
 }
 
+output "public_subnet_ids" {
+  value = data.aws_subnets.public.ids
+  description = "List of public subnet IDs in the default VPC"
+}
+
 # Create EKS Cluster
 resource "aws_eks_cluster" "eks_cluster" {
   name     = "EKS_CLOUD"
