@@ -1,7 +1,7 @@
 name: terraform apply & destroy
 
 on:
-  workflow-dispatch:
+  workflow_dispatch:
     inputs:
       action:
         description: 'Please provide apply or destroy'
